@@ -6,6 +6,8 @@ from .featurizer import Featurizer
 TAGGER = pycrfsuite.Tagger()
 TAGGER.open("%s/artifacts/crf3_mix.crfsuite2" % os.path.dirname(__file__))
 
+DUMMY_TOKEN = "<SSG_SPECIAL>"
+
 N = 3
 FEATURIZER = Featurizer(N=N)
 
@@ -13,9 +15,9 @@ def decode(txt, tag):
     res = []
     for c, t in zip(list(txt), tag):
         if t == "1": 
-            res.append("~")
+            res.append(DUMMY_TOKEN)
         res.append(c)
-    return "".join(res).split("~")
+    return "".join(res).split(DUMMY_TOKEN)
 
 def syllable_tokenize(txt, sep="~"):
     feature = FEATURIZER.featurize(
