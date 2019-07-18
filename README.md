@@ -4,8 +4,8 @@
 The model is stored in `ssg/artifacts/crf3_mix.crfsuite2`.
 
 ### Data
-Trained on a human-annotated subcorpus of the [http://www.arts.chula.ac.th/~ling/tnc3/](Thai National Corpus)
-using ][https://pypi.org/project/python-crfsuite/](python-crfsuite)
+Trained on a human-annotated subcorpus of the [Thai National Corpus](http://www.arts.chula.ac.th/~ling/tnc3/)
+using [python-crfsuite](https://pypi.org/project/python-crfsuite/)
 
 ### Parameters
 - L1 penalty: `1.0` 
