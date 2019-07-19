@@ -29,4 +29,5 @@ The following table shows the performance of the current best model as compared 
 | MaxEnt | Sliding Window             | 3                                 | 0.9731  | 0.9822         | 0.9642      | 0.9871  | 0.9963        | 0.9780      |
 
 \*Ngram features are not sliding window features but refer only to sequences of 3 characters on the left and right sides of a given character.
+
 \*\*SL = Syllable level, CL = Character level
