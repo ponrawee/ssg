@@ -18,7 +18,7 @@ up to a radius of 4 on both sides)
 - Individual character features (each of the characters surrounding a potential boundary within the window of size 3)
 
 ## Performance
-The following table shows the performance of the current best model as compared to other models. The test set is from the same corpus and is roughly 780000 characters (excluding syllable and sentence delimiters).
+The following table shows the performance of the current best model and compares it against other models. The test set is from the same corpus and is roughly 780,000 characters long (excluding syllable and sentence delimiters).
 
 | Model  | Features                   | Window Size                       | F1 (SL) | Precision (SL) | Recall (SL) | F1 (CL) | Precision (CL) | Recall (CL) |
 |--------|----------------------------|-----------------------------------|---------|----------------|-------------|---------|---------------|-------------|
