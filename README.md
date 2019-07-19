@@ -4,7 +4,7 @@
 The model is stored in `ssg/artifacts/crf3_mix.crfsuite2`.
 
 ### Data
-Trained on a 500,000-character human-annotated subcorpus of the [Thai National Corpus](http://www.arts.chula.ac.th/~ling/tnc3/)
+Trained on a 5,600,000-character human-annotated subcorpus of the [Thai National Corpus](http://www.arts.chula.ac.th/~ling/tnc3/)
 using [python-crfsuite](https://pypi.org/project/python-crfsuite/)
 
 ### Parameters
