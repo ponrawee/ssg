@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
 """
-Thai syllable segmentation using Conditional Random Field
+Thai syllable segmentation using Conditional Random Fields
 """
 
 from setuptools import setup
@@ -18,8 +18,7 @@ setup(
     include_package_data=True,
     version="0.0.1",
     install_requires=requirements,
-    license="MIT",
-    description="Thai syllable segmentation using Conditional Random Field",
+    description="Thai syllable segmentation using Conditional Random Fields",
     author="Ponrawee Prasertsom",
     author_email="ponrawee.pra@gmail.com",
     url="https://github.com/ponrawee/ssg",

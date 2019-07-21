@@ -5,15 +5,14 @@ class Featurizer:
         
     def __init__(self, N=2, sequence_size=1, delimiter='~'):
         self.N = N
-        self.seq = sequence_size
         self.delimiter = delimiter
         self.radius = N + sequence_size
         pass
     
     def pad(self, sentence, padder='#'):
-        return padder * (self.N + self.seq) + sentence + padder * (self.N + self.seq)
+        return padder * (self.radius) + sentence + padder * (self.radius)
 
-    def featurize(self, sentence, padding=False, indiv_char=False, return_type='dict'):
+    def featurize(self, sentence, padding=True, indiv_char=True, return_type='list'):
         if padding:
             sentence = self.pad(sentence)
         all_features = []
@@ -31,8 +30,6 @@ class Featurizer:
             if char == self.delimiter:
                 cut = 1
                 skip_next = True
-            # ไล่จากซ้ายไปขวา
-            # ไล่ไปทางซ้าย, ขวา จนครบ radius
             counter = 0
             chars_left = ''
             chars_right = ''
