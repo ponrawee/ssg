@@ -73,7 +73,7 @@ class Featurizer:
                 counter += 1
                 
             chars = chars_left + chars_right
-            for i in range(0, len(chars) - self.radius + 1):
+            for i in range(0, len(chars) - self.N + 1):
                 ngram = chars[i:i + self.N]
                 ngram_key = '|'.join([str(i - self.radius), ngram])
                 if return_type == 'dict':
