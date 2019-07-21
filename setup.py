@@ -6,9 +6,6 @@ Thai syllable segmentation using Conditional Random Fields
 
 from setuptools import setup
 
-with open("requirements.txt") as f:
-    requirements = f.read().splitlines()
-
 setup(
     name="ssg",
     packages=["ssg"],
@@ -16,8 +13,12 @@ setup(
     package_data={"ssg": ["artifacts/*"]},
     scripts=["scripts/ssg-cli"],
     include_package_data=True,
-    version="0.0.1",
-    install_requires=requirements,
+    version="0.0.3",
+    install_requires=[
+        'fire==0.1.3'
+        'python-crfsuite==0.9.6'
+        'tqdm==4.32.2'
+    ],
     description="Thai syllable segmentation using Conditional Random Fields",
     author="Ponrawee Prasertsom",
     author_email="ponrawee.pra@gmail.com",

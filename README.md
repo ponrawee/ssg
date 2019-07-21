@@ -1,10 +1,32 @@
 # CRF syllable segmenter for Thai
+[![Build Status](https://www.travis-ci.com/ponrawee/ssg.svg?branch=master)](https://www.travis-ci.com/ponrawee/ssg)
+
+`ssg` is a syllable segmenter for Thai using Conditional Random Fields. This is part of work from [Natural Language Processing Lab @Chula](https://attapol.github.io/lab.html), under the supervision of Dr. Attapol Thamrongrattanarit.
+
+## Installation
+```console
+foo@bar~$: pip install ssg
+```
+
+## Usage
+To use,
+
+```python
+from ssg import syllable_tokenize
+syllable_tokenize('ทดสอบ') # returns ['ทด', 'สอบ']
+```
+
+`ssg` also comes with its own CLI. 
+
+```console
+foo@bar~$: ssg-cli PATH_TO_INPUT PATH_TO_OUTPUT
+```
 
 ## Model
-The model is stored in `ssg/artifacts/crf3_mix.crfsuite2`.
+The model itself is stored in `ssg/artifacts/crf3_mix.crfsuite2`. 
 
 ### Data
-Trained on a 5,600,000-character human-annotated subcorpus of the [Thai National Corpus](http://www.arts.chula.ac.th/~ling/tnc3/)
+The dataset used for training is a 5,600,000-character human-annotated subcorpus of the [Thai National Corpus](http://www.arts.chula.ac.th/~ling/tnc3/)
 using [python-crfsuite](https://pypi.org/project/python-crfsuite/)
 
 ### Parameters
@@ -23,7 +45,7 @@ The following table shows the performance of the current best model and compares
 | Model  | Features                   | Window Size                       | F1 (SL) | Precision (SL) | Recall (SL) | F1 (CL) | Precision (CL) | Recall (CL) |
 |--------|----------------------------|-----------------------------------|---------|----------------|-------------|---------|---------------|-------------|
 | CRF    | IndivChar + Sliding Window | 4 (IndivChar), 4 (Sliding Window) | 0.9854  | 0.9876         | 0.9832      | 0.9935  | 0.9958        | 0.9854      |
-| CRF    | IndivChar + Ngram          | 4 (IndivChar), 3 (Ngram)          | 0.9809  | 0.9848         | 0.9771      | 0.9917  | 0.9956        | 0.9878      |
+| CRF    | IndivChar + Ngram\*        | 4 (IndivChar), 3 (Ngram\*)        | 0.9809  | 0.9848         | 0.9771      | 0.9917  | 0.9956        | 0.9878      |
 | CRF    | IndivChar + Sliding Window | 3 (IndivChar), 3 (Sliding Window) | 0.9804  | 0.9831         | 0.9778      | 0.9909  | 0.9936        | 0.9882      |
 | MaxEnt | IndivChar + Sliding Window | 3 (IndivChar), 3 (Sliding Window) | 0.9772  | 0.9819         | 0.9725      | 0.9899  | 0.9946        | 0.9852      |
 | MaxEnt | Sliding Window             | 3                                 | 0.9731  | 0.9822         | 0.9642      | 0.9871  | 0.9963        | 0.9780      |
