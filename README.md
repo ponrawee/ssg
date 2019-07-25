@@ -26,8 +26,7 @@ foo@bar~$: ssg-cli PATH_TO_INPUT PATH_TO_OUTPUT
 The model itself is stored in `ssg/artifacts/crf3_mix.crfsuite2`. 
 
 ### Data
-The dataset used for training is a 5,600,000-character human-annotated subcorpus of the [Thai National Corpus](http://www.arts.chula.ac.th/~ling/tnc3/)
-using [python-crfsuite](https://pypi.org/project/python-crfsuite/)
+The dataset used for training is a 5,600,000-character human-annotated subcorpus of the [Thai National Corpus](http://www.arts.chula.ac.th/~ling/tnc3/), trained using [python-crfsuite](https://pypi.org/project/python-crfsuite/)
 
 ### Parameters
 - L1 penalty: `1.0` 
