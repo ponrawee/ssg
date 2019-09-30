@@ -13,11 +13,11 @@ setup(
     package_data={"ssg": ["artifacts/*"]},
     scripts=["scripts/ssg-cli"],
     include_package_data=True,
-    version="0.0.3",
+    version="0.0.4",
     install_requires=[
-        'fire==0.1.3',
-        'python-crfsuite==0.9.6',
-        'tqdm==4.32.2'
+        'fire>=0.1.3',
+        'python-crfsuite>=0.9.6',
+        'tqdm>=4.32.2'
     ],
     description="Thai syllable segmentation using Conditional Random Fields",
     author="Ponrawee Prasertsom",
