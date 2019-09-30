@@ -15,9 +15,9 @@ setup(
     include_package_data=True,
     version="0.0.4",
     install_requires=[
-        'fire==0.2.1',
-        'python-crfsuite==0.9.6',
-        'tqdm==4.35.0'
+        'fire>=0.1.3',
+        'python-crfsuite>=0.9.6',
+        'tqdm>=4.32.2'
     ],
     description="Thai syllable segmentation using Conditional Random Fields",
     author="Ponrawee Prasertsom",
