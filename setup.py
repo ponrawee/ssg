@@ -13,7 +13,7 @@ setup(
     package_data={"ssg": ["artifacts/*"]},
     scripts=["scripts/ssg-cli"],
     include_package_data=True,
-    version="0.0.4",
+    version="0.0.5",
     install_requires=[
         'fire>=0.1.3',
         'python-crfsuite>=0.9.6',
