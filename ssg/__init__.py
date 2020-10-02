@@ -11,7 +11,7 @@ DUMMY_TOKEN = "<SSG_SPECIAL>"
 N = 3
 FEATURIZER = Featurizer(N=N)
 
-def decode(txt, tag):
+def decode(txt:list, tag:list)->list:
     res = []
     for c, t in zip(list(txt), tag):
         if t == "1": 
@@ -19,7 +19,7 @@ def decode(txt, tag):
         res.append(c)
     return "".join(res).split(DUMMY_TOKEN)
 
-def syllable_tokenize(txt, sep="~"):
+def syllable_tokenize(txt:str, sep:str="~")->list:
     feature = FEATURIZER.featurize(
         txt, return_type='list', padding=True, indiv_char=True
     )
