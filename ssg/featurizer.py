@@ -3,16 +3,16 @@ class Featurizer:
 #      "0 (current anchor)|+1 (the character on the right from anchor)|A (character)" : 1
 #     }
         
-    def __init__(self, N:int=2, sequence_size:int=1, delimiter:str='~'):
+    def __init__(self, N:int=2, sequence_size:int=1, delimiter:str='~')->None:
         self.N = N
         self.delimiter = delimiter
         self.radius = N + sequence_size
         pass
     
-    def pad(self, sentence:str, padder:str='#'):
+    def pad(self, sentence:str, padder:str='#')->str:
         return padder * (self.radius) + sentence + padder * (self.radius)
 
-    def featurize(self, sentence:str, padding:bool=True, indiv_char:bool=True, return_type:str='list'):
+    def featurize(self, sentence:str, padding:bool=True, indiv_char:bool=True, return_type:str='list')->dict:
         if padding:
             sentence = self.pad(sentence)
         all_features = []
@@ -87,7 +87,7 @@ class Featurizer:
             'Y': all_labels
         }
           
-    def sentences_to_features(self, sentences:list, indiv_char:bool=False):
+    def sentences_to_features(self, sentences:list, indiv_char:bool=False)->tuple:
         features = []
         labels = []
         for sentence in sentences:

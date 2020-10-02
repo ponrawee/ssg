@@ -5,7 +5,7 @@ from fire import Fire
 
 from ssg import syllable_tokenize
 
-def _count_lines(file:str):
+def _count_lines(file:str)->int:
     with open(file, "r") as f:
         count = 0
         for l in f:
