@@ -3,7 +3,7 @@ class Featurizer:
 #      "0 (current anchor)|+1 (the character on the right from anchor)|A (character)" : 1
 #     }
         
-    def __init__(self, N=2, sequence_size=1, delimiter='~'):
+    def __init__(self, N=2, sequence_size=1, delimiter=None):
         self.N = N
         self.delimiter = delimiter
         self.radius = N + sequence_size
